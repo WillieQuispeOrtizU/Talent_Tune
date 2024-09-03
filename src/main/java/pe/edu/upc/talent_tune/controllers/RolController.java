@@ -3,9 +3,7 @@ package pe.edu.upc.talent_tune.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.upc.talent_tune.dtos.CategoriaDTO;
 import pe.edu.upc.talent_tune.dtos.RolDTO;
-import pe.edu.upc.talent_tune.entities.Categoria;
 import pe.edu.upc.talent_tune.entities.Rol;
 import pe.edu.upc.talent_tune.serviceinterfaces.IRolService;
 
