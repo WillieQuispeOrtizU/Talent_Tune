@@ -1,6 +1,6 @@
 package pe.edu.upc.talent_tune.dtos;
 
-import pe.edu.upc.talent_tune.entities.Categoria;
+import pe.edu.upc.talent_tune.entities.Evento;
 import pe.edu.upc.talent_tune.entities.Persona;
 import pe.edu.upc.talent_tune.entities.Rol;
 
@@ -11,7 +11,7 @@ public class UsuarioDTO {
     private String descripcion;
     private Persona persona;
     private Rol rol;
-    private Categoria categoria;
+    private Evento evento;
 
     public int getIdUsuario() {
         return idUsuario;
@@ -61,11 +61,11 @@ public class UsuarioDTO {
         this.rol = rol;
     }
 
-    public Categoria getCategoria() {
-        return categoria;
+    public Evento getEvento() {
+        return evento;
     }
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
+    public void setEvento(Evento evento) {
+        this.evento = evento;
     }
 }

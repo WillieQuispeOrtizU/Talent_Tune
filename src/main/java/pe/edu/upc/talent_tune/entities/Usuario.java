@@ -1,5 +1,6 @@
 package pe.edu.upc.talent_tune.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -7,7 +8,7 @@ import jakarta.persistence.*;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idPersona;
+    private int idUsuario;
     @Column(name = "nombreUsuario", nullable = false, length = 20)
     private String nombreUsuario;
     @Column(name = "contrasenia", nullable = false, length = 20)
@@ -15,9 +16,11 @@ public class Usuario {
     @Column(name = "descripcion", length = 45)
     private String descripcion;
     //consultar
-    @OneToOne(cascade = CascadeType.ALL)
+    @JsonIgnore
+    @OneToOne
     @JoinColumn(name = "idPersona")
     private Persona persona;
+
     @ManyToOne
     @JoinColumn(name = "idRol")
     private Rol rol;
@@ -28,8 +31,8 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(int idPersona, String nombreUsuario, String contrasenia, String descripcion, Persona persona, Rol rol, Evento evento) {
-        this.idPersona = idPersona;
+    public Usuario(int idUsuario, String nombreUsuario, String contrasenia, String descripcion, Persona persona, Rol rol, Evento evento) {
+        this.idUsuario = idUsuario;
         this.nombreUsuario = nombreUsuario;
         this.contrasenia = contrasenia;
         this.descripcion = descripcion;
@@ -39,11 +42,11 @@ public class Usuario {
     }
 
     public int getIdPersona() {
-        return idPersona;
+        return idUsuario;
     }
 
-    public void setIdPersona(int idPersona) {
-        this.idPersona = idPersona;
+    public void setIdPersona(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNombreUsuario() {
