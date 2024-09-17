@@ -38,4 +38,9 @@ public class UsuarioServiceImplement implements IUsuarioService {
     public List<Usuario> buscarPorPais(String pais) {
         return uR.buscarPorPais(pais);
     }
+
+    @Override
+    public List<Usuario> buscarPorEstudios(String estudios) {
+        return uR.buscarPorEstudios(estudios);
+    }
 }
