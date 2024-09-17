@@ -8,4 +8,7 @@ import pe.edu.upc.talent_tune.entities.Usuario;
 public interface IUsuarioRepository extends JpaRepository<Usuario, Integer> {
   @Query("Select u from Usuario u where u.persona.pais like %:pais%")
     public List<Usuario> buscarPorPais(@Param("pais") String pais);
+
+  @Query("Select u from Usuario u where u.persona.estudios like %:estudios%")
+    public List<Usuario> buscarPorEstudios(@Param("estudios") String estudios);
 }
