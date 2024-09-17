@@ -10,4 +10,5 @@ public interface IUsuarioService {
     public void update(Usuario usuario);
     public void delete(int id);
     public List<Usuario> buscarPorPais(String pais);
+    public List<Usuario> buscarPorEstudios(String estudios);
 }
