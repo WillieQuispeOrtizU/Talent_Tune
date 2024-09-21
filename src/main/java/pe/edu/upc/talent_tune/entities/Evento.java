@@ -48,11 +48,11 @@ public class Evento {
         this.nombreEvento = nombreEvento;
     }
 
-    public Date getFechaEvento() {
+    public LocalDate getFechaEvento() {
         return fechaEvento;
     }
 
-    public void setFechaEvento(Date fechaEvento) {
+    public void setFechaEvento(LocalDate fechaEvento) {
         this.fechaEvento = fechaEvento;
     }
 

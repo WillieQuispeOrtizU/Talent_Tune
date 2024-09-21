@@ -11,4 +11,6 @@ public interface IUsuarioService {
     public void delete(int id);
     public List<Usuario> buscarPorPais(String pais);
     public List<Usuario> buscarPorEstudios(String estudios);
+    public List<String[]> obtenerUsuarioMasVisualizaciones();
+
 }
