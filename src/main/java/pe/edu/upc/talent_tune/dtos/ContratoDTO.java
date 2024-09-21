@@ -3,6 +3,7 @@ package pe.edu.upc.talent_tune.dtos;
 import pe.edu.upc.talent_tune.entities.Banda;
 import pe.edu.upc.talent_tune.entities.Usuario;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class ContratoDTO {
@@ -11,7 +12,7 @@ public class ContratoDTO {
 
     private String acuerdoContrato;
 
-    private Date fechaContrato;
+    private LocalDate fechaContrato;
 
     private String duracionContrato;
 
@@ -41,11 +42,11 @@ public class ContratoDTO {
         this.acuerdoContrato = acuerdoContrato;
     }
 
-    public Date getFechaContrato() {
+    public LocalDate getFechaContrato() {
         return fechaContrato;
     }
 
-    public void setFechaContrato(Date fechaContrato) {
+    public void setFechaContrato(LocalDate fechaContrato) {
         this.fechaContrato = fechaContrato;
     }
 
